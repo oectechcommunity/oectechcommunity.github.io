@@ -1,0 +1,113 @@
+/* Our team */
+#our-team .row,
+#our-team #our-team-details {
+    margin-bottom: 0;
+    background-color: #465a65;
+}
+
+#our-team .row .col {
+    padding: 48px;
+}
+
+#our-team .member-cards {
+    background-color: #546e7b;
+}
+
+#our-team .member-cards img {
+    object-fit: cover;
+}
+
+.stack {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#our-team .card {
+    color: #333333;
+}
+
+#our-team .card-image {
+    display: flex;
+    align-items: stretch;
+}
+
+#our-team .card-image img {
+    min-height: 250px;
+}
+
+#our-team .card-content {
+    display: flex;
+    align-items: center;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+
+#our-team .card-content .position {
+    font-weight: 700;
+    color: var(--color-secondary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#our-team .card-content .name {
+    font-weight: 500;
+    margin-top: 18px !important;
+    font-size: 1.8rem;
+}
+
+#our-team .card-content .skills {
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+#our-team .card.horizontal .card-image {
+    max-width: 40%;
+}
+
+#our-team .card .social {
+    margin-top: 18px;
+}
+
+#our-team .card a {
+    font-size: 1.3rem;
+    margin-right: 18px;
+    color: var(--color-gray);
+    margin-left: 1.5px;
+}
+
+@media only screen and (max-width: 992px) {
+    #our-team .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* Our team */
+
+    #our-team .row .col {
+        padding: 28px;
+    }
+    #our-team .member-cards {
+        background-color: #546e7b;
+    }
+
+    #our-team .card-content .position {
+        font-weight: 600;
+        color: var(--color-secondary);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    #our-team .card-content .name {
+        font-weight: 500;
+        margin-top: 18px !important;
+        font-size: 1.5rem;
+    }
+
+    #our-team .card-content .skills {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}

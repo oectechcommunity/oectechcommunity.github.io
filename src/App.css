@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.primary-section {
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 80%;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.parallax-container {
+    background: rgba(0, 0, 0, 0.4);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Heading */
+.heading {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-family: 'Bree Serif';
+    letter-spacing: 4px;
+    color: #333333;
 }
 
-.App-link {
-  color: #61dafb;
+.paragraph {
+    letter-spacing: 0.7px;
+    word-spacing: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.raised-btn.btn,
+.raised-btn.btn-large {
+    background-color: var(--color-primary);
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 28px;
+    padding-right: 28px;
+    height: auto;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mt-2 {
+    margin-top: 24px;
+}
+.mb-2 {
+    margin-bottom: 24px;
+}
+
+@media only screen and (max-width: 992px) {
+    /* Heading */
+    .heading {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    /* Paragraph */
+    .paragraph {
+        font-size: 1.1rem;
+        letter-spacing: 0.7px;
+        word-spacing: 1px;
+    }
 }

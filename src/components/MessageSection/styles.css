@@ -1,0 +1,73 @@
+/* Be-our-member & Volunteer*/
+#message-section {
+    background: linear-gradient(
+        to right,
+        var(--color-secondary) 0%,
+        var(--color-primary) 100%
+    );
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-top: 48px;
+}
+
+#message-section.buttonOnRightSection {
+    margin-top: 0px;
+}
+
+#message-section .row {
+    margin: 0;
+    height: 78px;
+}
+
+#message-section .col {
+    height: 100%;
+    display: flex;
+    align-items: center !important;
+}
+
+#message-section .btn,
+#message-section .btn-large {
+    background-color: var(--color-primary);
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 28px;
+    padding-right: 28px;
+    height: auto;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#message-section p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 992px) {
+    #message-section.buttonOnLeftSection .row {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #message-section .row {
+        height: auto;
+    }
+
+    #message-section .btn,
+    #message-section .btn-large {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 1rem;
+    }
+
+    #message-section .row p {
+        margin-top: 0;
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,31 @@
+/* Footer */
+footer {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+footer .footer-copyright {
+    background-color: #465a65 !important;
+}
+footer.page-footer {
+    padding-top: 20px;
+    color: #000000;
+    background-color: #465a65;
+}
+
+footer .fas,
+footer .fab {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+footer .social {
+    margin-left: -8px;
+}
+
+footer .social a {
+    color: #ffffff;
+}

@@ -1,0 +1,33 @@
+/* our events cards */
+#our-events .card-content .card-title,
+#our-events .card-reveal .card-title {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+#our-events .btn-floating {
+    background-color: var(--color-primary);
+}
+
+#our-events .card-content .event-date,
+#our-events .card-reveal .event-date {
+    color: var(--color-gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+#our-events .card-action .register-btn.btn-flat {
+    padding-left: 4px;
+    padding-right: 4px;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 992px) {
+    /* Our events */
+
+    #our-events .card {
+        min-width: 300px;
+    }
+}
