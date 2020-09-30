@@ -1,8 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Logo from '../../assets/logo/logo.png';
+import { withRouter } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = (props) => {
+    const pathName = props.location.pathname;
+
+    const [navLinks, setNavLinks] = useState(null);
+
+    useEffect(() => {
+        if (pathName.includes('/members')) {
+            setNavLinks(
+                <li>
+                    <a
+                        href="https://github.com/oectechcommunity/"
+                        className="nav-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Contribute
+                    </a>
+                </li>
+            );
+        } else {
+            setNavLinks(
+                <li>
+                    <a href="/members" className="nav-link">
+                        Members
+                    </a>
+                </li>
+            );
+        }
+    }, []);
+
     return (
         <div className="nav-container">
             <nav>
@@ -11,35 +41,44 @@ const NavBar = () => {
                         <img src={Logo} alt="Athena logo" />
                     </a>
                     <ul className="right hide-on-med-and-down list-only-large">
-                        <li className="">
-                            <a
-                                href="#under-development-alert"
-                                className="nav-link modal-trigger"
-                            >
-                                Members
-                            </a>
-                        </li>
+                        {navLinks}
                         <li>
                             <ul className="social-icons">
                                 <li>
-                                    <a href="#!">
+                                    <a
+                                        href="https://github.com/oectechcommunity/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <i className="fab fa-github"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#!">
+                                    <a
+                                        href="https://www.facebook.com/oectechcommunity/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <i className="fab fa-facebook"></i>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#!">
+                                    <a
+                                        href="https://instagram.com/oectechcommunity/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <i className="fab fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#!">
+                                    <a
+                                        href="https://linkedin.com/company/oectechcommunity/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
                                         <i className="fab fa-linkedin"></i>
                                     </a>
                                 </li>
@@ -70,4 +109,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default withRouter(NavBar);

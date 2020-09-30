@@ -5,8 +5,11 @@ const EventCard = ({ event }) => {
         <div className="col s12 l4">
             <div className="card">
                 <div className="card-image">
-                    <img src={event.banner} />
-                    <a className="btn-floating halfway-fab btn-large pulse activator">
+                    <img src={event.banner} alt={event.title} />
+                    <a
+                        className="btn-floating halfway-fab btn-large pulse activator"
+                        href="#!"
+                    >
                         <i className="material-icons">notes</i>
                     </a>
                 </div>
@@ -17,7 +20,10 @@ const EventCard = ({ event }) => {
                     </span>
                 </div>
                 <div className="card-action">
-                    <a className="waves-effect waves-white btn-flat register-btn disabled">
+                    <a
+                        className="waves-effect waves-white btn-flat register-btn disabled"
+                        href="#!"
+                    >
                         Registration Closed
                     </a>
                 </div>

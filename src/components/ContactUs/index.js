@@ -14,6 +14,7 @@ const ContactUs = () => {
                 width="100%"
                 height="350px"
                 frameborder="0"
+                title="oec tech community"
             ></iframe>
         </section>
     );

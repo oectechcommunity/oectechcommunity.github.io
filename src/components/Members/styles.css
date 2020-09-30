@@ -1,0 +1,16 @@
+#members .member-card .academic-year {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    color: var(--color-secondary);
+}
+#members .member-card .name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 14px;
+    color: #131313;
+}
+#members .member-card .branch {
+    font-size: 1rem;
+}

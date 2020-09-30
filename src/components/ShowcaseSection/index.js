@@ -1,5 +1,4 @@
 import React from 'react';
-import Soh2018 from '../../assets/images/soh2018.jpg';
 import './styles.css';
 
 const ShowcaseSection = ({ bgImage, title }) => {

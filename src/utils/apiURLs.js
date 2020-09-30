@@ -3,4 +3,6 @@ module.exports = {
         'https://raw.githubusercontent.com/oectechcommunity/apis/master/mentors/members.json',
     EVENTS_API:
         'https://raw.githubusercontent.com/oectechcommunity/apis/master/events/events.json',
+    MEMBERS_API:
+        'https://raw.githubusercontent.com/oectechcommunity/apis/master/members/members.json',
 };

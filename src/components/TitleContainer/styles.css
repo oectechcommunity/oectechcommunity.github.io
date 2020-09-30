@@ -1,0 +1,41 @@
+#title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title-container.parallax-container {
+    height: 280px;
+    width: 100%;
+}
+
+#title-container .title-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    letter-spacing: 1px;
+}
+
+#title-container .title {
+    color: #ffffff;
+    margin: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    #title-container .title-area {
+        padding-top: 24px;
+        padding-bottom: 24px;
+        min-height: 98px;
+    }
+
+    #title-container.parallax-container {
+        height: 150px;
+    }
+
+    #title-container .title {
+        letter-spacing: 1px;
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+}
