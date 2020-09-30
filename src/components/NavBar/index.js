@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Logo from '../../assets/logo/logo.png';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 const NavBar = (props) => {
     const pathName = props.location.pathname;
@@ -25,9 +25,9 @@ const NavBar = (props) => {
         } else {
             setNavLinks(
                 <li>
-                    <a href="/members" className="nav-link">
+                    <Link to="/members" className="nav-link">
                         Members
-                    </a>
+                    </Link>
                 </li>
             );
         }
@@ -37,9 +37,9 @@ const NavBar = (props) => {
         <div className="nav-container">
             <nav>
                 <div className="nav-wrapper">
-                    <a href="/" className="brand-logo left">
+                    <Link to="/" className="brand-logo left">
                         <img src={Logo} alt="Athena logo" />
-                    </a>
+                    </Link>
                     <ul className="right hide-on-med-and-down list-only-large">
                         {navLinks}
                         <li>
