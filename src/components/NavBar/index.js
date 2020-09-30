@@ -94,14 +94,7 @@ const NavBar = (props) => {
                         <i className="material-icons">more_vert</i>
                     </a>
                     <ul id="more-dropdown" className="dropdown-content">
-                        <li>
-                            <a
-                                href="#under-development-alert"
-                                className="modal-trigger"
-                            >
-                                Members
-                            </a>
-                        </li>
+                        {navLinks}
                     </ul>
                 </div>
             </nav>
