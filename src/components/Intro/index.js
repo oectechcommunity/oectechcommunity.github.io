@@ -14,10 +14,12 @@ const Intro = () => {
 
                         <div className="mt-3">
                             <RaisedButton
-                                link="#!"
-                                title="Latest Events"
+                                link="https://github.com/oectechcommunity"
+                                title="Contribute"
                                 isPrimary={true}
+                                iconClass="fab fa-github-alt"
                             />
+                            {/* <i className="fab fa-facebook"></i> */}
                         </div>
                     </div>
                 </div>

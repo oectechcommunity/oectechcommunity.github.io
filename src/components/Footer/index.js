@@ -17,10 +17,13 @@ const Footer = () => {
                         </p>
                         <div className="social">
                             <a href="#!">
+                                <i className="fab fa-github"></i>
+                            </a>
+                            <a href="#!">
                                 <i className="fab fa-facebook"></i>
                             </a>
                             <a href="#!">
-                                <i className="fab fa-twitter"></i>
+                                <i className="fab fa-instagram"></i>
                             </a>
 
                             <a href="#!">
