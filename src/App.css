@@ -18,9 +18,11 @@
     text-align: center;
     text-transform: capitalize;
     font-size: 3rem;
-    font-family: 'Bree Serif';
-    letter-spacing: 4px;
+    font-family: 'Poppins';
+    /* letter-spacing: 4px; */
     color: #333333;
+    font-weight: 700;
+    padding-bottom: 12px;
 }
 
 .paragraph {
@@ -28,25 +30,23 @@
     word-spacing: 1px;
 }
 
-.raised-btn.btn,
-.raised-btn.btn-large {
-    background-color: var(--color-primary);
-    border-radius: 4px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 28px;
-    padding-right: 28px;
-    height: auto;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    font-family: 'Poppins', sans-serif;
-}
-
 .mt-2 {
     margin-top: 24px;
 }
 .mb-2 {
     margin-bottom: 24px;
+}
+.mt-3 {
+    margin-top: 36px;
+}
+.mb-3 {
+    margin-bottom: 36px;
+}
+.mt-4 {
+    margin-top: 48px;
+}
+.mb-4 {
+    margin-bottom: 48px;
 }
 
 @media only screen and (max-width: 992px) {

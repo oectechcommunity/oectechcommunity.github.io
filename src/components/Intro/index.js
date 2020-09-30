@@ -1,5 +1,6 @@
 import React from 'react';
 import TeamWork from '../../assets/images/team-work.svg';
+import RaisedButton from '../RaisedButton';
 import './styles.css';
 
 const Intro = () => {
@@ -8,11 +9,16 @@ const Intro = () => {
             <div className="row">
                 <div className="col s12 l6">
                     <div>
-                        <h3>
-                            Welcome to <br />
-                            our Technical Community
-                        </h3>
+                        <h3>Welcome to our Tech Community</h3>
                         <h6>#Learn #Build #Network #Grow</h6>
+
+                        <div className="mt-3">
+                            <RaisedButton
+                                link="#!"
+                                title="Latest Events"
+                                isPrimary={true}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="col s12 l6 hide-on-med-and-down">

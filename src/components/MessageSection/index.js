@@ -1,9 +1,10 @@
 import React from 'react';
+import RaisedButton from '../RaisedButton';
 import './styles.css';
 
 const MessageSection = ({
     isReverseSection,
-    details: { message, buttonText, buttonLink, iconClass },
+    details: { message, buttonText, buttonLink, iconClass, isPrimary },
 }) => {
     return (
         <section
@@ -23,15 +24,11 @@ const MessageSection = ({
                             }
                         >
                             {!isReverseSection ? (
-                                <a
-                                    className="waves-effect waves-light btn"
-                                    href={buttonLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <i className={`left ${iconClass}`}></i>
-                                    {buttonText}
-                                </a>
+                                <RaisedButton
+                                    link={buttonLink}
+                                    title={buttonText}
+                                    iconClass={iconClass}
+                                />
                             ) : (
                                 <p>{message}</p>
                             )}
@@ -44,14 +41,12 @@ const MessageSection = ({
                             {!isReverseSection ? (
                                 <p>{message}</p>
                             ) : (
-                                <a
-                                    className="waves-effect waves-light btn raised-btn"
-                                    href={buttonLink}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {buttonText}
-                                </a>
+                                <RaisedButton
+                                    link={buttonLink}
+                                    title={buttonText}
+                                    iconClass={iconClass}
+                                    isPrimary={isPrimary}
+                                />
                             )}
                         </div>
                     </div>

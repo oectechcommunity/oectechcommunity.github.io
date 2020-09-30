@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import './App.css';
 import NavBar from './components/NavBar';
@@ -14,52 +14,69 @@ import Soh2018 from './assets/images/soh2018.jpg';
 import OurEvents from './components/OurEvents';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
+import Loader from './components/Loader';
 
 const App = () => {
-    useEffect(() => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    const initial = () => {
         M.AutoInit();
+    };
+
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+            initial();
+        }, 3600);
     }, []);
 
     return (
         <div>
-            <NavBar />
-            <Intro />
-            <MessageSection
-                isReverseSection={false}
-                details={{
-                    message:
-                        'Join with us to attend all the events organisedby us.',
-                    buttonText: 'Join us today',
-                    buttonLink: '/',
-                    iconClass: 'fas fa-user-plus',
-                }}
-            />
-            <ShowcaseSection
-                bgImage={Soh2018}
-                title="Represent OEC at Smart Odisha Hackathon 2018"
-            />
-            <AboutUs />
-            <ParallaxContainer />
-            <OurTeam />
-            <MessageSection
-                isReverseSection={true}
-                details={{
-                    message:
-                        'Join with us to attend all the events organised by us.',
-                    buttonText: 'be our volunteer',
-                    buttonLink: '/',
-                    iconClass: 'fas fa-user-plus',
-                }}
-            />
+            {!isLoading ? (
+                <div>
+                    <NavBar />
+                    <Intro />
+                    <MessageSection
+                        isReverseSection={true}
+                        details={{
+                            message:
+                                'Join with us to attend all the events organisedby us.',
+                            buttonText: 'Join us today',
+                            buttonLink: '/',
+                            isPrimary: true,
+                            // iconClass: 'fas fa-user-plus',
+                        }}
+                    />
+                    <ShowcaseSection
+                        bgImage={Soh2018}
+                        title="Represent OEC at Smart Odisha Hackathon 2018"
+                    />
+                    <AboutUs />
+                    <ParallaxContainer />
+                    <OurTeam />
+                    <MessageSection
+                        isReverseSection={true}
+                        details={{
+                            message:
+                                'Join with us to attend all the events organised by us.',
+                            buttonText: 'be our volunteer',
+                            buttonLink: '/',
+                            isPrimary: true,
+                        }}
+                    />
 
-            <ShowcaseSection
-                bgImage={Soh2018}
-                title="Organising Zazen TechFest 2019"
-            />
+                    <ShowcaseSection
+                        bgImage={Soh2018}
+                        title="Organising Zazen TechFest 2019"
+                    />
 
-            <OurEvents />
-            <ContactUs />
-            <Footer />
+                    <OurEvents />
+                    <ContactUs />
+                    <Footer />
+                </div>
+            ) : (
+                <Loader />
+            )}
         </div>
     );
 };
