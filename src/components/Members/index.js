@@ -1,6 +1,4 @@
-import Axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { MEMBERS_API } from '../../utils/apiURLs';
+import React from 'react';
 import MemberCard from './MemberCard';
 import './styles.css';
 

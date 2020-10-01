@@ -43,13 +43,6 @@ const HomePage = () => {
         fetchTeamLeads();
     }, []);
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setIsLoading(false);
-    //         initial();
-    //     }, 1800);
-    // }, []);
-
     return (
         <div>
             {!isLoading ? (
