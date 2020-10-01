@@ -12,20 +12,43 @@ import OurTeam from '../../components/OurTeam';
 import ParallaxContainer from '../../components/PrallaxContainer';
 import ShowcaseSection from '../../components/ShowcaseSection';
 import Soh2018 from '../../assets/images/soh2018.jpg';
+import Axios from 'axios';
+import { MENTORS_API } from '../../utils/apiURLs';
 
 const HomePage = () => {
     const [isLoading, setIsLoading] = useState(true);
+    const [ourTeamLeads, setOurTeamLeads] = useState([]);
 
     const initial = () => {
         M.AutoInit();
     };
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
+    const fetchTeamLeads = async () => {
+        setTimeout(async () => {
+            try {
+                const response = await Axios.get(MENTORS_API);
+
+                setOurTeamLeads(response.data);
+
+                setIsLoading(false);
+            } catch (error) {
+                console.log(error);
+            }
+
             initial();
-        }, 3600);
+        }, 1500);
+    };
+
+    useEffect(() => {
+        fetchTeamLeads();
     }, []);
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setIsLoading(false);
+    //         initial();
+    //     }, 1800);
+    // }, []);
 
     return (
         <div>
@@ -50,7 +73,7 @@ const HomePage = () => {
                     />
                     <AboutUs />
                     <ParallaxContainer />
-                    <OurTeam />
+                    <OurTeam ourTeamLeads={ourTeamLeads} />
                     <MessageSection
                         isReverseSection={true}
                         details={{

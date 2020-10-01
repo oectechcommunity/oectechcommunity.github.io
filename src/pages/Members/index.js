@@ -5,20 +5,42 @@ import TitleContainer from '../../components/TitleContainer';
 import Footer from '../../components/Footer';
 import Loader from '../../components/Loader';
 import Members from '../../components/Members';
+import { MEMBERS_API } from '../../utils/apiURLs';
+import Axios from 'axios';
 
 const MembersPage = () => {
     const [isLoading, setIsLoading] = useState(true);
+    const [membersList, setMembersList] = useState([]);
 
     const initial = () => {
         M.AutoInit();
     };
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false);
+    const fetchMembersList = async () => {
+        setTimeout(async () => {
+            try {
+                const response = await Axios.get(MEMBERS_API);
+                setMembersList(response.data);
+
+                setIsLoading(false);
+            } catch (error) {
+                console.log(error);
+            }
+
             initial();
-        }, 3600);
+        }, 1500);
+    };
+
+    useEffect(() => {
+        fetchMembersList();
     }, []);
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setIsLoading(false);
+    //         initial();
+    //     }, 3600);
+    // }, []);
 
     return (
         <div>
@@ -26,7 +48,7 @@ const MembersPage = () => {
                 <div>
                     <NavBar />
                     <TitleContainer title="Members" />
-                    <Members />
+                    <Members membersList={membersList} />
                     <Footer />
                 </div>
             ) : (
