@@ -1,28 +1,8 @@
-import Axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { MENTORS_API } from '../../utils/apiURLs';
+import React from 'react';
 import MentorCard from './MentorCard';
 import './styles.css';
 
 const OurTeam = ({ ourTeamLeads }) => {
-    // const [isLoading, setIsLoading] = useState(true);
-    // const [ourTeamLeads, setOurTeamLeads] = useState([]);
-
-    // const fetchTeamLeads = async () => {
-    //     try {
-    //         const response = await Axios.get(MENTORS_API);
-    //         setOurTeamLeads(response.data);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-
-    //     setIsLoading(false);
-    // };
-
-    // useEffect(() => {
-    //     fetchTeamLeads();
-    // }, []);
-
     return (
         <section id="our-team">
             <div className="row">

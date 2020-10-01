@@ -8,7 +8,7 @@ const EventCard = ({ event }) => {
                     <img src={event.banner} alt={event.title} />
                     <a
                         className="btn-floating halfway-fab btn-large pulse activator"
-                        href="#!"
+                        href="##"
                     >
                         <i className="material-icons">notes</i>
                     </a>
@@ -22,7 +22,7 @@ const EventCard = ({ event }) => {
                 <div className="card-action">
                     <a
                         className="waves-effect waves-white btn-flat register-btn disabled"
-                        href="#!"
+                        href="/"
                     >
                         Registration Closed
                     </a>

@@ -1,8 +1,26 @@
+#members .card-container {
+    position: relative;
+}
+#members .card-overlay {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+#members .card-overlay .fab {
+    font-size: 1.3rem;
+    
+}
+
+#members .member-card {
+    background-image: url('../../assets/images/card-background.png');
+    border-radius: 4px;
+}
 #members .member-card .academic-year {
     font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     color: var(--color-secondary);
+    font-family: 'Roboto', sans-serif;
 }
 #members .member-card .name {
     font-size: 1.4rem;
@@ -12,5 +30,9 @@
     color: #131313;
 }
 #members .member-card .branch {
-    font-size: 1rem;
+    font-size: 1.02rem;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.2rem;
+    letter-spacing: 0.02rem;
+    color: #7f8c8d;
 }
