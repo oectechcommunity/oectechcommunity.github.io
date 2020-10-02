@@ -1,14 +1,12 @@
 import React from 'react';
+import HeadingTitle from '../HeadingTitle';
 import './styles.css';
 
 const AboutUs = () => {
     return (
         <section class="container primary-section" id="about-us">
-            <h2 class="heading">
-                <span style={{ color: 'var(--color-secondary)' }}>About </span>
-                Us
-            </h2>
-            <p class="paragraph">
+            <HeadingTitle title="About Us" isSecondary={false} />
+            <p class="paragraph center">
                 Athena is a Technical Community formed by some geeky OECians to
                 share the latest technologies and trends for students and tech
                 enthusiast like you to make you more updated and efficient in

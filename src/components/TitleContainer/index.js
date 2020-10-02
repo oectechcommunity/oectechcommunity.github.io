@@ -1,8 +1,7 @@
 import React from 'react';
-import bgImage from '../../assets/images/soh2018.jpg';
 import './styles.css';
 
-const TitleContainer = ({ title }) => {
+const TitleContainer = ({ title, bgImage }) => {
     return (
         <div className="parallax-container" id="title-container">
             <div className="parallax">

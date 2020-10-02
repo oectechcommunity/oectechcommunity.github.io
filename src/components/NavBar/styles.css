@@ -20,7 +20,7 @@ nav .list-only-large li {
 
 nav .brand-logo,
 nav .list-only-large a {
-    color: var(--color-gray) !important;
+    color: var(--color-gray);
     font-weight: 500;
     padding-top: 7px !important;
     padding-bottom: 7px !important;
@@ -38,6 +38,18 @@ nav .list-only-large a:hover {
     height: 60px;
 }
 
+nav .back-btn {
+    color: black;
+    margin-left: 12px;
+    height: 100%;
+    padding-top: 4px;
+}
+
+nav .back-btn .fas {
+    font-size: 2rem;
+    height: 0%;
+}
+
 @media only screen and (max-width: 992px) {
     /* Nav bar */
     nav {
@@ -51,13 +63,17 @@ nav .list-only-large a:hover {
         padding-bottom: 3px !important;
     }
 
+    nav .back-btn {
+        padding-top: 8px;
+    }
+
     .brand-logo img {
         height: 52px;
     }
 
     .dropdown-content {
         min-width: 200px;
-        top: -10px
+        top: -10px;
     }
 
     .dropdown-content a {

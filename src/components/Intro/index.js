@@ -9,17 +9,16 @@ const Intro = () => {
             <div className="row">
                 <div className="col s12 l6">
                     <div>
-                        <h3>Welcome to our Tech Community</h3>
+                        <h3>Welcome to our Tech Community.</h3>
                         <h6>#Learn #Build #Network #Grow</h6>
 
                         <div className="mt-3">
                             <RaisedButton
                                 link="https://github.com/oectechcommunity"
-                                title="Contribute"
+                                title="Contribute Today"
                                 isPrimary={true}
                                 iconClass="fab fa-github-alt"
                             />
-                            {/* <i className="fab fa-facebook"></i> */}
                         </div>
                     </div>
                 </div>

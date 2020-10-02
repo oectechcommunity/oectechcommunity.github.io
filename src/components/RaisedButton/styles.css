@@ -1,19 +1,23 @@
 .raised-btn.btn,
 .raised-btn.btn-large {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
     height: auto;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
     font-family: 'Poppins', sans-serif;
     box-shadow: none;
+    border-radius: 4px;
+    text-transform: inherit;
+    font-weight: 400;
 }
 
 .btn-primary,
 .btn-primary:focus {
     background-color: var(--color-button-primary);
+    /* color: #000000; */
 }
 .btn-primary:hover {
     background-color: var(--color-button-primary-dark);
