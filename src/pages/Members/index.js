@@ -7,6 +7,7 @@ import Loader from '../../components/Loader';
 import Members from '../../components/Members';
 import { MEMBERS_API } from '../../utils/apiURLs';
 import Axios from 'axios';
+import bgImage from '../../assets/images/bg-2.jpg';
 
 const MembersPage = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -35,19 +36,12 @@ const MembersPage = () => {
         fetchMembersList();
     }, []);
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setIsLoading(false);
-    //         initial();
-    //     }, 3600);
-    // }, []);
-
     return (
         <div>
             {!isLoading ? (
                 <div>
                     <NavBar />
-                    <TitleContainer title="Members" />
+                    <TitleContainer title="Members" bgImage={bgImage} />
                     <Members membersList={membersList} />
                     <Footer />
                 </div>

@@ -1,0 +1,19 @@
+.heading-title {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.heading-title .title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    /* line-height: 1rem; */
+    margin-top: 8px;
+}
+
+.heading-title .bar {
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+    height: 4px;
+    margin: 0 auto;
+    width: 30px;
+}

@@ -7,6 +7,7 @@ const NavBar = (props) => {
     const pathName = props.location.pathname;
 
     const [navLinks, setNavLinks] = useState(null);
+    const [navLeading, setNavLeading] = useState(null);
 
     useEffect(() => {
         if (pathName.includes('/members')) {
@@ -37,14 +38,21 @@ const NavBar = (props) => {
         <div className="nav-container">
             <nav>
                 <div className="nav-wrapper">
-                    <Link to="/" className="brand-logo left">
-                        <img src={Logo} alt="Athena logo" />
-                    </Link>
+                    {pathName.includes('/members') ? (
+                        <Link to="/" className="left back-btn">
+                            <i className="fas fa-long-arrow-alt-left"></i>
+                        </Link>
+                    ) : (
+                        <Link to="/" className="brand-logo left">
+                            <img src={Logo} alt="Athena logo" />
+                        </Link>
+                    )}
+
                     <ul className="right hide-on-med-and-down list-only-large">
                         {navLinks}
                         <li>
                             <ul className="social-icons">
-                                <li>
+                                <li className="nav-link">
                                     <a
                                         href="https://github.com/oectechcommunity/"
                                         target="_blank"
@@ -54,7 +62,7 @@ const NavBar = (props) => {
                                     </a>
                                 </li>
 
-                                <li>
+                                <li className="nav-link">
                                     <a
                                         href="https://www.facebook.com/oectechcommunity/"
                                         target="_blank"
@@ -64,7 +72,7 @@ const NavBar = (props) => {
                                     </a>
                                 </li>
 
-                                <li>
+                                <li className="nav-link">
                                     <a
                                         href="https://instagram.com/oectechcommunity/"
                                         target="_blank"
@@ -73,7 +81,7 @@ const NavBar = (props) => {
                                         <i className="fab fa-instagram"></i>
                                     </a>
                                 </li>
-                                <li>
+                                <li className="nav-link">
                                     <a
                                         href="https://linkedin.com/company/oectechcommunity/"
                                         target="_blank"

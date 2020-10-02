@@ -52,14 +52,14 @@
 @media only screen and (max-width: 992px) {
     /* Heading */
     .heading {
-        font-size: 2rem;
-        letter-spacing: 2px;
+        /* font-size: 2rem;
+        letter-spacing: 2px; */
     }
 
     /* Paragraph */
     .paragraph {
-        font-size: 1.1rem;
-        letter-spacing: 0.7px;
-        word-spacing: 1px;
+        /* font-size: 1.1rem; */
+        /* letter-spacing: 0.7px;
+        word-spacing: 1px; */
     }
 }

@@ -20,7 +20,7 @@ const MessageSection = ({
                     <div className="row">
                         <div
                             className={
-                                !isReverseSection ? 'col s12 l4' : 'col s12 l8'
+                                !isReverseSection ? 'col s12 l4' : 'col s12 l9'
                             }
                         >
                             {!isReverseSection ? (
@@ -35,7 +35,7 @@ const MessageSection = ({
                         </div>
                         <div
                             className={
-                                !isReverseSection ? 'col s12 l8' : 'col s12 l4'
+                                !isReverseSection ? 'col s12 l8' : 'col s12 l3'
                             }
                         >
                             {!isReverseSection ? (

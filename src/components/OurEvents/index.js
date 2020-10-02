@@ -4,6 +4,7 @@ import RaisedButton from '../RaisedButton';
 import Axios from 'axios';
 import { EVENTS_API } from '../../utils/apiURLs';
 import EventCard from './EventCard';
+import HeadingTitle from '../HeadingTitle';
 
 const OurEvents = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -28,12 +29,7 @@ const OurEvents = () => {
         <div>
             {!isLoading ? (
                 <section className="primary-section container" id="our-events">
-                    <h2 className="heading">
-                        <span style={{ color: 'var(--color-secondary)' }}>
-                            Our{' '}
-                        </span>
-                        Events
-                    </h2>
+                    <HeadingTitle isSecondary={false} title="Latest Events" />
                     <div>
                         <div className="row">
                             {eventsList.map((event, i) => (
