@@ -3,11 +3,11 @@ import './styles.css';
 
 const ShowcaseSection = ({ bgImage, title }) => {
     return (
-        <div class="parallax-container" id="showcase-section">
-            <div class="title-container">
-                <h5 class="title">{title}</h5>
+        <div className="parallax-container" id="showcase-section">
+            <div className="title-container">
+                <h5 className="title">{title}</h5>
             </div>
-            <div class="parallax">
+            <div className="parallax">
                 <img src={bgImage} alt={title} />
             </div>
         </div>

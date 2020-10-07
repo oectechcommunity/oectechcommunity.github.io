@@ -7,13 +7,13 @@ import Intro from '../../components/Intro';
 import Loader from '../../components/Loader';
 import MessageSection from '../../components/MessageSection';
 import NavBar from '../../components/NavBar';
-import OurEvents from '../../components/OurEvents';
 import OurTeam from '../../components/OurTeam';
 import ParallaxContainer from '../../components/PrallaxContainer';
 import ShowcaseSection from '../../components/ShowcaseSection';
 import Soh2018 from '../../assets/images/soh2018.jpg';
 import Axios from 'axios';
 import { MENTORS_API } from '../../utils/apiURLs';
+import LatestEvents from '../../components/LatestEvents';
 
 const HomePage = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -57,7 +57,6 @@ const HomePage = () => {
                             buttonText: 'Join us today',
                             buttonLink: '/',
                             isPrimary: true,
-                            // iconClass: 'fas fa-user-plus',
                         }}
                     />
                     <ShowcaseSection
@@ -72,7 +71,7 @@ const HomePage = () => {
                         details={{
                             message:
                                 'Join with us to attend all the events organised by us.',
-                            buttonText: 'be our volunteer',
+                            buttonText: 'Be our Volunteer',
                             buttonLink: '/',
                             isPrimary: true,
                         }}
@@ -83,7 +82,8 @@ const HomePage = () => {
                         title="Organising Zazen TechFest 2019"
                     />
 
-                    <OurEvents />
+                    {/* <OurEvents /> */}
+                    <LatestEvents />
                     <ContactUs />
                     <Footer />
                 </div>

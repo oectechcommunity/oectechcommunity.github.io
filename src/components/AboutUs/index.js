@@ -4,9 +4,9 @@ import './styles.css';
 
 const AboutUs = () => {
     return (
-        <section class="container primary-section" id="about-us">
+        <section className="container primary-section" id="about-us">
             <HeadingTitle title="About Us" isSecondary={false} />
-            <p class="paragraph center">
+            <p className="paragraph center">
                 Athena is a Technical Community formed by some geeky OECians to
                 share the latest technologies and trends for students and tech
                 enthusiast like you to make you more updated and efficient in
