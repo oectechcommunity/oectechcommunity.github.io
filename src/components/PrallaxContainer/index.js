@@ -3,8 +3,8 @@ import bgImage from '../../assets/images/soh2018.jpg';
 
 const ParallaxContainer = () => {
     return (
-        <div class="parallax-container">
-            <div class="parallax">
+        <div className="parallax-container">
+            <div className="parallax">
                 <img src={bgImage} alt="bg" />
             </div>
         </div>

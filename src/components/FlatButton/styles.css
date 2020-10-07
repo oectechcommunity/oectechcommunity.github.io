@@ -1,0 +1,31 @@
+.flat-btn.btn,
+.flat-btn.btn-large {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 18px;
+    padding-right: 18px;
+    height: auto;
+    font-size: 0.9rem;
+    letter-spacing: 0.3rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: none;
+    border-radius: 4px;
+    text-transform: inherit;
+    font-weight: 400;
+    background-color: transparent;
+    color: black;
+    border: 2px solid #0000001c;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.flat-btn.btn:hover,
+.flat-btn.btn-large:hover {
+    border-color: var(--color-button-primary-dark);
+    color: var(--color-button-primary-dark);
+}
+
+.flat-btn.btn.disabled,
+.flat-btn.btn-large.disabled {
+    background-color:  #00000005 !important;
+}
